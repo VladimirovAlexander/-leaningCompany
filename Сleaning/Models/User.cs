@@ -8,8 +8,6 @@ namespace Сleaning.Models
 
         public string? Surname { get; set; }
 
-        public string? Name { get; set; }
-
         public string? Patronymic { get; set; }
 
         public string? PhoenNumber { get; set; }
