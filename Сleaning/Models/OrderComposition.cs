@@ -4,9 +4,10 @@
     {
         public Guid Id { get; set; }
 
-        public virtual Order Order { get; set; } = null!;
+        public ICollection<Order> Order { get; set; } = new List<Order>();
 
-        public virtual Product Product { get; set; } = null!;
+        public ICollection<Product> Product { get; set; } = new List<Product>();
+
 
     }
 }

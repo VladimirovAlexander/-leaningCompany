@@ -8,7 +8,7 @@
 
         public string? Price { get; set; }
 
-        public ICollection<OrderComposition> orderCompositions { get; set; } = new List<OrderComposition>();
-
+        public virtual OrderComposition OrderComposition { get; set; } = null!;
     }
+
 }

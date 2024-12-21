@@ -18,6 +18,6 @@
 
         public DateOnly DateOfEmployment { get; set; }
 
-        public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public virtual Order? Order { get; set; }
     }
 }

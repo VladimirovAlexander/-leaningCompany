@@ -1,6 +1,8 @@
-﻿namespace Сleaning.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace Сleaning.Models
 {
-    public class Client
+    public class User: IdentityUser
     {
         public Guid Id { get; set; }
 
@@ -15,5 +17,7 @@
         public string? Email { get; set; }
 
         public virtual Order Order { get; set; } = null!;
+
+        public ICollection<Room> Room { get; set; } = new List<Room>();
     }
 }
