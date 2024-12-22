@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<header>
+    <h1>Клининговая компания</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li class="dropdown">
+                <a href="#rates">Виды услуг</a>
+                <div class="dropdown-content">
+                    <a href="#">Уборка квартиры</a><br>
+                    <a href="#">Уборка домов</a><br>
+                    <a href="#">Уборка офисов</a>
+                    <a href="#">Уборка помещений</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#about">О компании</a>
+                <div class="dropdown-content">
+                    <a href="#">История</a><br>
+                    <a href="#">Ценности</a><br>
+                    <a href="#">Наши клиенты</a>
+                </div>
+            </li>
+            <li><a href="#portfolio">Наши работы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <button id="loginButton" class="login-button" onclick="toggleModal()">Войти</button>
+        <!-- Модальное окно авторизации -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span> <!-- Кнопка закрытия окна -->
+                <h2>Форма авторизации</h2>
+                <form id="loginForm">
+                    <label for="username">Логин:</label><br>
+                    <input type="text" id="username" name="username" required><br>
+                    <label for="password">Пароль:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>

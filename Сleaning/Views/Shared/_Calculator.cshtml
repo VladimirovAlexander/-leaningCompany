@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<section id="calculator">
+    <h2>Калькулятор</h2>
+    <label for="place">Выберите место уборки:</label>
+    <select id="place">
+        <option value="Квартира">Квартира</option>
+        <option value="Дом">Дом</option>
+        <option value="Офис">Офис</option>
+        <option value="Другое">Другое</option>
+    </select><br>
+
+    <label for="cleaning-type">Выберите тип уборки:</label>
+    <select id="cleaning-type">
+        <option value="Поддерживающая">Поддерживающая</option>
+        <option value="Генеральная">Генеральная</option>
+        <option value="После ремонта">После ремонта</option>
+        <option value="После пожара">После пожара</option>
+        <option value="Антибактериальная">Антибактериальная</option>
+        <option value="Другое">Другое</option>
+    </select><br>
+
+    <label for="additional-services">Выберите дополнительные услуги:</label><br>
+    <input type="checkbox" id="furniture-cleaning" value="Химчистка мебели">
+    <label for="furniture-cleaning">Химчистка мебели</label><br>
+    <input type="checkbox" id="carpet-cleaning" value="Химчистка ковра">
+    <label for="carpet-cleaning">Химчистка ковра</label><br>
+    <input type="checkbox" id="window-cleaning" value="Мытье окон">
+    <label for="window-cleaning">Мытье окон</label><br>
+    <input type="checkbox" id="ironing" value="Глажка вещей">
+    <label for="ironing">Глажка вещей</label><br>
+
+    <label for="area">Введите площадь:</label>
+    <input type="number" id="area" min="0" step="any"><br>
+
+    <button onclick="calculate()">Рассчитать</button>
+
+    <p id="result"></p>
+
+    <style>
+        #calculator {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            #calculator h2 {
+                text-align: center;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+
+
+
+    <style>
+        #contact {
+            padding: 20px; /* Задаем отступы по всем сторонам */
+        }
+    </style>
+
+</section>
+

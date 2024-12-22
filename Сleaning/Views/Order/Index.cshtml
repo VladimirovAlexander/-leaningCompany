@@ -1,0 +1,36 @@
+﻿@using Сleaning.Dtos
+@model GetAllOrdersViewDto
+@{
+    ViewData["Title"] = "Клининговая компания";
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <script src="wwwroot/js/script.js"></script>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="container">
+        @await Html.PartialAsync("_Header")
+        <section id="home" style="display: flex; align-items: center;">
+            <img src="images/pngegg.png" width="297" height="407" style="margin-right: 20px;" />
+            <div>
+                <button class="consultation-button">Бесплатная консультация по номеру телефона 89464432142</button>
+                <p>
+                    Уборка квартир, домов, коммерческих помещений, офисов.<br>
+                    Все виды поддерживания чистоты после праздников, ремонтов и бытовых загрязнений
+                </p>
+            </div>
+        </section>
+        <h2>Наши услуги</h2>
+        @await Html.PartialAsync("_Services")
+        @await Html.PartialAsync("_About")
+        @await Html.PartialAsync("_Portfolio")
+        @await Html.PartialAsync("_Calculator")
+        @await Html.PartialAsync("_Contact")
+    </div>
+</body>
+</html>
