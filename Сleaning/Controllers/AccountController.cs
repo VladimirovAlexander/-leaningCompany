@@ -117,13 +117,13 @@ namespace Сleaning.Controllers
         public async Task<IActionResult> Profile()
         {
             var username = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.GivenName)?.Value;
-            var appUser = await _userManager.FindByNameAsync(username);
 
-            if (appUser == null)
+            if (username != null)
             {
-                return NotFound();
+                var appUser = await _userManager.FindByNameAsync(username);
+                return View(appUser);
             }
-            return View(appUser);
+            return NotFound();
         }
 
         [HttpPut]
