@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
 }
 <header>
@@ -28,20 +26,8 @@
             <li><a href="#portfolio">Наши работы</a></li>
             <li><a href="#contact">Контакты</a></li>
         </ul>
-        <button id="loginButton" class="login-button" onclick="toggleModal()">Войти</button>
-        <!-- Модальное окно авторизации -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span> <!-- Кнопка закрытия окна -->
-                <h2>Форма авторизации</h2>
-                <form id="loginForm">
-                    <label for="username">Логин:</label><br>
-                    <input type="text" id="username" name="username" required><br>
-                    <label for="password">Пароль:</label><br>
-                    <input type="password" id="password" name="password" required><br><br>
-                    <button type="submit">Войти</button>
-                </form>
-            </div>
-        </div>
+        <form asp-controller = "Account" asp-action = "login" method = "get">
+            <button type="submit" id="loginButton" class="login-button">Войти</button>
+        </form>
     </nav>
 </header>

@@ -1,10 +1,12 @@
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OAuth;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Сleaning.Data;
 using Сleaning.Interfaces;
+using Сleaning.Models;
 using Сleaning.Repository;
 using Сleaning.Service;
 
@@ -34,6 +36,15 @@ namespace Сleaning
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 
             });
+
+            builder.Services.AddIdentity<User, IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 8;
+
+            }).AddEntityFrameworkStores<ApplicationDbContext>();
 
             builder.Services.AddAuthorization();
 
